@@ -1,0 +1,61 @@
+--geração de chave:
+	>>> from django.core.management.utils import get_random_secret_key
+	>>> get_random_secret_key()
+
+	setando no HEROKU:
+		
+		heroku config:set SECRET_KEY=<sua_chave_secreta>
+
+	#documentação
+		
+		https://docs.djangoproject.com/en/3.0/ref/settings/#secret-key
+		https://docs.djangoproject.com/en/3.0/topics/signing/
+
+-- Domínio e ALLOWED_HOSTS
+
+	quando for comprar:
+	https://www.python.pro.br/modulos/django/topicos/dominio-e-allowed-hosts
+
+	heroku domains:add <seu_dominio.com.br>
+	heroku config:set ALLOWED_HOSTS='<seu_dominio.com.br>, <seu_outro_dominio.com.br>
+
+-- Comando de Coleta de Arquivos Estáticos
+
+	python manage.py collectstatic # mng collectstatic
+
+	Configurações no no settings.py:
+
+	# Configuração de ambiente de desenvolvimento
+
+	STATIC_URL = '/static/'
+	STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+	MEDIA_URL = '/media/'
+	MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
+
+-- Criação e Configuração do S3
+
+	Link para acessar o S3:
+	https://console.aws.amazon.com/s3/home
+
+	Link para acessar os usuários (IAM):
+	https://console.aws.amazon.com/iam/home?#/users/cursopython
+
+	Link para o gerador de políticas da Amazon:
+	https://awspolicygen.s3.amazonaws.com/policygen.html
+
+--Comando Makemigrations e Alias mng
+
+	Comandos utilizados:
+
+	mng makemigrations
+	mng showmigrations
+	mng makemigrations <app>
+
+--Comando para aplicar migrações no Banco
+
+	mng migrate
+
+	Comando para criar super usuário:
+
+	mng createsuperuser
