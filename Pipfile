@@ -21,6 +21,8 @@ django-debug-toolbar = "*"
 sentry-sdk = "*"
 flake8 = "*"
 codecov = "*"
+ipython = "*"
+django-extensions = "*"
 
 [requires]
 python_version = "3.8"
