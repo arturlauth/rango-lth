@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rango</title>
+</head>
+<body>
+<h1>Rango says...</h1>
+<div>
+    hey there partner! <br/>
+    <strong>{{ boldmessage }}</strong><br/>
+</div>
+<div>
+    <a href="/rango/about/">About</a><br/>
+</div>
+<div>
+    <img src="{% static 'img/gatoprogramador.jpg' %}" alt="My image" width="50%">
+</div>
+</body>
+</html>

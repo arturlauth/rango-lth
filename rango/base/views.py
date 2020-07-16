@@ -1,7 +1,7 @@
-from django.http import HttpResponse
-
 # Create your views here.
+from django.shortcuts import render
 
 
 def home(request):
-    return HttpResponse('<html><body>Teste config setup</body></html>', content_type='text/html')
+    context_dict = {'boldmessage': "Meow, meow, meow"}
+    return render(request, 'base/home.html', context=context_dict)
