@@ -1,5 +1,7 @@
 import os
 
+from django.template.defaultfilters import lower
+
 os.environ.setdefault('DJANGO_SETTINGS_MODULE',
                       'rango.settings')
 

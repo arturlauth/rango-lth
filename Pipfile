@@ -23,6 +23,8 @@ flake8 = "*"
 codecov = "*"
 ipython = "*"
 django-extensions = "*"
+django-ordered-model = "*"
+model-bakery = "*"
 
 [requires]
 python_version = "3.8"

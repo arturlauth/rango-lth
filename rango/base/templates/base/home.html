@@ -11,6 +11,13 @@
     hey there partner! <br/>
     <strong>{{ boldmessage }}</strong><br/>
 </div>
+<ul>
+    {% for category in categories %}
+    <li>
+        <a href="/category/{{ category.slug }}">{{ category.name }}</a>
+    </li>
+    {% endfor %}
+</ul>
 <div>
     <a href="/rango/about/">About</a><br/>
 </div>
