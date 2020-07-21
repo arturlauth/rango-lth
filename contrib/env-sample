@@ -9,4 +9,3 @@ AWS_STORAGE_BUCKET_NAME=
 INTERNAL_IPS=127.0.0.1
 SENTRY_DSN=
 
-DATABASE_URL:            postgres://zficbvvjiypkma:815cec04418389d9992b3fa29a100c715218981424038c83ca72aad2244f8a8f@ec2-34-197-188-147.compute-1.amazonaws.com:5432/d71mglii5m1jfn
