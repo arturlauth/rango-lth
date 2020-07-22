@@ -1,6 +1,5 @@
 import os
 
-from django.template.defaultfilters import lower
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE',
                       'rango.settings')
@@ -12,43 +11,43 @@ from rango.rangomain.models import Category, Page
 
 
 def populate():
-    python_cat = add_cat('Python', views=128, likes=64)
+    python_cat = add_cat('Python - part 2', views=180, likes=64)
 
     add_page(cat=python_cat,
-             titulo="Official Python Tutorial",
-             url="http://docs.python.org/2/tutorial/")
+             titulo="Official Python Tutorial - part 2",
+             url="https://docs.djangoproject.com/en/3.0/")
 
     add_page(cat=python_cat,
-             titulo="How to Think like a Computer Scientist",
-             url="http://www.greenteapress.com/thinkpython/")
+             titulo="How to Think like a Computer Scientist - part 2",
+             url="https://docs.djangoproject.com/en/3.0/contents/")
 
     add_page(cat=python_cat,
-             titulo="Learn Python in 10 Minutes",
-             url="http://www.korokithakis.net/tutorials/python/")
+             titulo="Learn Python in 10 Minutes - part 2",
+             url="https://docs.djangoproject.com/en/3.0/intro/overview/#a-dynamic-admin-interface-it-s-not-just-scaffolding-it-s-the-whole-house")
 
-    django_cat = add_cat("Django", views=64, likes=32)
-
-    add_page(cat=django_cat,
-             titulo="Official Django Tutorial",
-             url="https://docs.djangoproject.com/en/1.5/intro/tutorial01/")
+    django_cat = add_cat("Django - part 2", views=90, likes=32)
 
     add_page(cat=django_cat,
-             titulo="Django Rocks",
-             url="http://www.djangorocks.com/")
+             titulo="Official Django Tutorial - part 2",
+             url="https://docs.djangoproject.com/en/3.0/intro/install/")
 
     add_page(cat=django_cat,
-             titulo="How to Tango with Django",
-             url="http://www.tangowithdjango.com/")
+             titulo="Django Rocks - part 2",
+             url="https://docs.djangoproject.com/en/3.0/intro/")
 
-    frame_cat = add_cat("Other Frameworks", views=32, likes=16)
+    add_page(cat=django_cat,
+             titulo="How to Tango with Django - part 2",
+             url="https://docs.djangoproject.com/en/3.0/intro/overview/")
+
+    frame_cat = add_cat("Other Frameworks - part 2", views=40, likes=16)
 
     add_page(cat=frame_cat,
-             titulo="Bottle",
-             url="http://bottlepy.org/docs/dev/")
+             titulo="Bottle - part 2",
+             url="https://docs.djangoproject.com/en/3.0/py-modindex/")
 
     add_page(cat=frame_cat,
-             titulo="Flask",
-             url="http://flask.pocoo.org")
+             titulo="Flask - part 2",
+             url="https://docs.djangoproject.com/en/3.0/faq/")
 
     # Print out what we have added to the user.
     for c in Category.objects.all():

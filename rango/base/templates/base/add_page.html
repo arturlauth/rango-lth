@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>Rango</title>
+</head>
+<body>
+<h1>Add a Category</h1>
+<div>
+    <form id="category_form" method="post" action="/add_page/">
+        {% csrf_token %}
+            {{ form }}
+        <input type="submit" name="submit" value="Create Page"/>
+    </form>
+</div>
+</body>
+</html>
