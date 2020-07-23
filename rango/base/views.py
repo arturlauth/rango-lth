@@ -12,9 +12,9 @@ def home(request):
 
 
 def show_category(request, slug):
-    categories = facade.encontrar_categorias(slug)
-    pages = facade.listar_paginas_de_category_ordenadas(categories)
-    return render(request, 'base/category.html', context={'categories': categories, 'pages': pages})
+    category = facade.encontrar_categorias(slug)
+    pages = facade.listar_paginas_de_category_ordenadas(category)
+    return render(request, 'base/category.html', context={'category': category, 'pages': pages})
 
 
 def add_category(request):
