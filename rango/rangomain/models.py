@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 from ordered_model.models import OrderedModel
 from django.utils.text import slugify
@@ -20,6 +21,9 @@ class Category(OrderedModel):
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return reverse('base:show_category', kwargs={'slug': self.slug})
 
 
 class Page(OrderedModel):

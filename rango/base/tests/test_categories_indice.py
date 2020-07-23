@@ -29,3 +29,12 @@ def test_indice_disponivel(resp):
 def test_page_titulo(resp, pages):
     for page in pages:
         assert_contains(resp, page.titulo)
+
+
+def test_category_name(resp, category):
+    assert_contains(resp, category.name)
+
+
+def test_page_link(resp, pages):
+    for page in pages:
+        assert_contains(resp, page.url)
