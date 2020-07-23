@@ -1,17 +1,13 @@
+{% extends 'base/base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Rango</title>
-</head>
-<body>
+{% block body_block %}
 <div>
     <h1>Top 5 liked categories</h1>
     <ul>
         {% for category in categories %}
         <li>
-            <a href="/category/{{ category.slug }}">{{ category.name }}</a>
+            <a href="{% url 'base:show_category' category.slug %}">{{ category.name }}</a>
         </li>
         {% endfor %}
     </ul>
@@ -26,14 +22,11 @@
         {% endfor %}
     </ul>
 </div>
-<div>
-    <a href="/about/">About</a><br/>
-    <a href="/add_category/"> Add Category</a>
-    <a href="/add_page/"> Add Page</a>
-</div>
+{% endblock %}
+{% block body_end_block %}
 <div>
     <img src="{% static 'img/gatoprogramador.jpg' %}" alt="My image" width="50%">
 </div>
+{% endblock %}
 
-</body>
 </html>
